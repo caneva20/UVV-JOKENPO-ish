@@ -1,0 +1,52 @@
+body {
+    font-family: "Metal Mania";
+    background-color: #3f4c43;
+    text-align: center;
+    color: white;
+
+    padding-top: 5px;
+    padding-bottom: 30px;
+}
+
+#selection {
+    /*height: 256px;*/
+}
+
+#game-result p {
+    font-size: 64px;
+}
+
+.versus {
+    font-size: 48px;
+    padding-top: 140px;
+}
+
+.warrior-avatar {
+    height: 170px;
+}
+
+.warrior-name {
+    padding-top: 10px;
+    font-size: 40px;
+}
+
+.wins {
+    font-size: 32px;
+}
+
+.weapons-title {
+    font-size: 28px;
+}
+
+.weapon-name {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.weapon-avatar {
+    height: 100px;
+}
+
+.selected-weapon {
+    padding-top: 100px;
+}

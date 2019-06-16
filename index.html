@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JOKENPO-ish</title>
+
+    <!--  CSS  -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Metal+Mania&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="app.css">
+
+    <!--  JS  -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <script src="js/UUID.js"></script>
+    <script src="js/arrayLib.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/weapon.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="character-selection">
+        <h1>Choose your warrior!</h1>
+        <br><br>
+        <div id="selection" class="row justify-content-center">
+        </div>
+
+        <br><br>
+
+        <div id="menu" class="row" style="display: none">
+            <div class="col">
+                <button class="btn btn-primary btn-block" onclick="reChoose()">Choose again</button>
+            </div>
+            <div class="col"></div>
+            <div class="col">
+                <button class="btn btn-success btn-block" onclick="selectDifficulty()">Continue >></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="difficulty-selection" style="display: none;">
+        <h1>Difficulty</h1>
+
+        <button class="btn btn-info col-sm-3" onclick="setDificculty(1.0)">Lazy</button>
+        <br><br>
+        <button class="btn btn-primary col-sm-3" onclick="setDificculty(0.75)">Easy</button>
+        <br><br>
+        <button class="btn btn-success col-sm-3" onclick="setDificculty(0.5)">Normal</button>
+        <br><br>
+        <button class="btn btn-danger col-sm-3" onclick="setDificculty(0.25)">Hard</button>
+        <br><br>
+        <button class="btn btn-dark col-sm-3" onclick="setDificculty(0.0)">:)</button>
+    </div>
+
+    <div id="game" style="display: none;">
+        <div class="row">
+            <div class="col" id="player-portrait">
+                <p class="warrior-name">KYLE</p>
+                <img class="warrior-avatar" src="imgs/southpark3.webp">
+                <p class="wins" id="player-wins">10 WINS</p>
+            </div>
+            <div class="col selected-weapon" id="player-weapon">
+                <p>Weapon</p>
+                <img class="weapon-avatar" src="imgs/rock.png">
+                <p class="weapon-name">ROCK</p>
+            </div>
+
+            <div class="col versus">Versus</div>
+
+            <div class="col selected-weapon" id="computer-weapon">
+                <p>Weapon</p>
+                <img class="weapon-avatar" src="imgs/hidden.png">
+                <p class="weapon-name">?</p>
+            </div>
+            <div class="col" id="computer-portrait">
+                <p class="warrior-name">COMPUTER GUY</p>
+                <img class="warrior-avatar" src="imgs/computer.gif">
+                <p class="wins" id="computer-wins">100 WINS</p>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div id="weapon-selection">
+            <p class="weapons-title">AVAILABLE WEAPONS</p>
+            <div class="row" id="weapons"></div>
+        </div>
+
+        <div id="game-result" style="display: none">
+            <p id="result-text">COMPUTER WON!</p>
+
+            <button class="btn btn-primary btn-lg btn-block" onclick="rematch()">AGAIN!!</button>
+        </div>
+    </div>
+
+    <div class="fixed-bottom row">
+        <a class="btn btn-warning btn-sm col-1 m-2" href="rules.html">Rules</a>
+        <button class="btn btn-warning btn-sm col-1 m-2" onclick="location.href = location.href">Start over
+        </button>
+    </div>
+</div>
+</body>
+</html>
